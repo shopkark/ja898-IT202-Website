@@ -1,2 +1,2 @@
-# ja898-IT202-Project
+# ja898-IT202-Website
 IT202 semester project

@@ -1,3 +1,5 @@
+-- Jazzlinne Arias 10/1 IT202-001 Phase 1 ja898@njit.edu
+
 CREATE TABLE IcecreamManagers (
     icecreamManagerID   INT(11)      NOT NULL   AUTO_INCREMENT,
     emailAddress        VARCHAR(255) NOT NULL   UNIQUE,

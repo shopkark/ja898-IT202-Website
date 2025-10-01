@@ -1,3 +1,5 @@
+<!-- Jazzlinne Arias 10/1 IT202-001 Phase 1 ja898@njit.edu -->
+
 <?php
  function getDB() {
    $host = 'sql1.njit.edu';

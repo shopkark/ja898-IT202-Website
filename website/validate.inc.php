@@ -1,5 +1,3 @@
-<!-- Jazzlinne Arias 10/1 IT202-001 Phase 1 ja898@njit.edu -->
-
 <?php
  error_log("\$_POST " . print_r($_POST, true));
  require_once('database.php');

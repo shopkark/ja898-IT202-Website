@@ -1,3 +1,4 @@
+-- Jazzlinne Arias 10/24 IT202-001 Phase 2 ja898@njit.edu
 -- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net

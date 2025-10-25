@@ -1,3 +1,5 @@
+# Jazzlinne Arias 10/24 IT202-001 Phase 2 ja898@njit.edu
+
 POST http://localhost:3000/addicecreamtype.test.php
 Content-Type: application/x-www-form-urlencoded
 

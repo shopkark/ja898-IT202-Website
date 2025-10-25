@@ -1,3 +1,5 @@
+-- Jazzlinne Arias 10/24 IT202-001 Phase 2 ja898@njit.edu
+
 CREATE TABLE Icecreams (
 icecreamID               INT(11)        NOT NULL,
 icecreamCode             VARCHAR(10)    NOT NULL  UNIQUE,

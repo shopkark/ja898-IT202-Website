@@ -12,7 +12,7 @@
  $stmt->bind_result($firstName, $lastName, $pronouns);
  $fetched = $stmt->fetch();
  if ($fetched) {
-   echo "<h2>Welcome to Icecream Shop's Inventory Helper, $name</h2>\n";
+   echo "<h2>Welcome to Icecream Shop's Inventory Helper, $firstName $lastName ($pronouns)</h2>\n";
    $_SESSION['login'] = true;
    $_SESSION['emailAddress'] = $emailAddress;
    $_SESSION['firstName'] = $firstName;

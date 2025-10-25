@@ -1,0 +1,9 @@
+<?php
+require_once("icecream.php");
+$icecreams = Icecream::getIcecreams();
+foreach($icecreams as $icecream) {
+   $icecreamID = $icecream->icecreamID;
+   $name = $icecreamID . " - " . $icecream->icecreamCode . ", " . $icecream->icecreamName . "\nDetails: " . $icecream->icecreamDescription . ", " . $icecream->icecreamFlavor . ", " . $icecream->icecreamServingSize . ", " . $icecream->icecreamTypeID . ", " . $icecream->icecreamWholesalePrice . ", " . $icecream->icecreamListPrice;
+   echo "$name<br>";
+}
+?>

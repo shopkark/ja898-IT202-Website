@@ -1,0 +1,22 @@
+POST http://localhost:3000/addicecreamtype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+icecreamTypeID=000
+&icecreamTypeCode=TEST
+&icecreamTypeName=Test data
+&icecreamTypeMachine=Machine
+###
+GET http://localhost:3000/listicecreamtypes.test.php
+###
+POST http://localhost:3000/changeicecreamtype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+icecreamTypeID=000
+&icecreamTypeCode=TEST2
+&icecreamTypeName=Testing data 2
+&icecreamTypeMachine=Machine 2
+###
+POST http://localhost:3000/removeicecreamtype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+icecreamTypeID=000

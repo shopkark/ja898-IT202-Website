@@ -1,0 +1,32 @@
+POST http://localhost:3000/addicecream.test.php
+Content-Type: application/x-www-form-urlencoded
+
+icecreamID=0
+&icecreamCode=TESTITEM
+&icecreamName=name
+&icecreamDescription=desc
+&icecreamFlavor=flav
+&icecreamServingSize=size
+&icecreamTypeID=000
+&icecreamWholesalePrice=0.50
+&icecreamListPrice=1.00
+###
+GET http://localhost:3000/listicecreams.test.php
+###
+POST http://localhost:3000/changeicecream.test.php
+Content-Type: application/x-www-form-urlencoded
+
+icecreamID=0
+&icecreamCode=TEST2
+&icecreamName=name2
+&icecreamDescription=desc2
+&icecreamFlavor=flav2
+&icecreamServingSize=size2
+&icecreamTypeID=000
+&icecreamWholesalePrice=0.01
+&icecreamListPrice=0.02
+###
+POST http://localhost:3000/removeicecream.test.php
+Content-Type: application/x-www-form-urlencoded
+
+icecreamID=0

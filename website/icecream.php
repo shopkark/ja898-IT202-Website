@@ -1,5 +1,5 @@
-<!-- Jazzlinne Arias 10/24 IT202-001 Phase 2 ja898@njit.edu -->
-
+<!-- Jazzlinne Arias 10/31 IT202-001 Phase 3 ja898@njit.edu -->
+ 
 <?php
 require_once('database.php');
 
@@ -131,59 +131,6 @@ class Icecream
        return $result;
    }
 
-//     static function findIcecream($icecreamID)
-//    {
-//        $db = getDB();
-//        $query = "SELECT * FROM Icecreams WHERE icecreamID = $icecreamID";
-//        $result = $db->query($query);
-//        $row = $result->fetch_array(MYSQLI_ASSOC);
-//        if ($row) {
-//            $icecream = new Icecream(
-//                    $row['icecreamID'],
-//                    $row['icecreamCode'],
-//                    $row['icecreamName'],
-//                    $row['icecreamDescription'],
-//                    $row['icecreamFlavor'],
-//                    $row['icecreamServingSize'],
-//                    $row['icecreamTypeID'],
-//                    $row['icecreamWholesalePrice'],
-//                    $row['icecreamListPrice']
-//            );
-//            $db->close();
-//            return $icecream;
-//        } else {
-//            $db->close();
-//            return NULL;
-//        }
-//    }
-//     function updateIcecream()
-//    {
-//        $db = getDB();
-//        $query = "UPDATE Icecreams SET icecreamCode = ?, " .
-//            "icecreamName = ?, " .
-//            "icecreamDescription = ?, " .
-//            "icecreamFlavor = ?, " .
-//            "icecreamServingSize = ?, " .
-//            "icecreamTypeID = ?, " .
-//            "icecreamWholesalePrice = ?, " .
-//            "icecreamListPrice = ? " .
-//            "WHERE icecreamID = $this->icecreamID";
-//        $stmt = $db->prepare($query);
-//        $stmt->bind_param(
-//            "sssssidd",
-//             $this->icecreamCode,
-//             $this->icecreamName,
-//             $this->icecreamDescription,
-//             $this->icecreamFlavor,
-//             $this->icecreamServingSize,
-//             $this->icecreamTypeID,
-//             $this->icecreamWholesalePrice,
-//             $this->icecreamListPrice
-//        );
-//        $result = $stmt->execute();
-//        $db->close();
-//        return $result;
-//    }
     function removeIcecream()
    {
        $db = getDB();
@@ -191,6 +138,35 @@ class Icecream
        $result = $db->query($query);
        $db->close();
        return $result;
+   }
+
+      static function getIcecreamsByType($icecreamTypeID)
+   {
+       $db = getDB();
+       $query = "SELECT * from Icecreams where icecreamTypeID = $icecreamTypeID";
+       $result = $db->query($query);
+       if (mysqli_num_rows($result) > 0) {
+           $icecreams = array();
+           while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+               $icecream = new Icecream(
+                   $row['icecreamID'],
+                   $row['icecreamCode'],
+                   $row['icecreamName'],
+                   $row['icecreamDescription'],
+                   $row['icecreamFlavor'],
+                   $row['icecreamServingSize'],
+                   $row['icecreamTypeID'],
+                   $row['icecreamWholesalePrice'],
+                   $row['icecreamListPrice']
+               );
+               array_push($icecreams, $icecream);
+           }
+           $db->close();
+           return $icecreams;
+       } else {
+           $db->close();
+           return NULL;
+       }
    }
 }
 ?>

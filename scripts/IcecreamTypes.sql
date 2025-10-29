@@ -1,10 +1,11 @@
--- Jazzlinne Arias 10/24 IT202-001 Phase 2 ja898@njit.edu
+-- Jazzlinne Arias 10/31 IT202-001 Phase 3 ja898@njit.edu
+
 -- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
 -- Host: sql1.njit.edu
--- Generation Time: Oct 25, 2025 at 02:21 AM
+-- Generation Time: Oct 29, 2025 at 03:50 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.4.8
 
@@ -41,6 +42,7 @@ CREATE TABLE IF NOT EXISTS `IcecreamTypes` (
 --
 
 INSERT INTO `IcecreamTypes` (`icecreamTypeID`, `icecreamTypeCode`, `icecreamTypeName`, `icecreamTypeMachine`, `DateTimeCreated`, `DateTimeUpdated`) VALUES
+(0, 'TEST', 'Test data', 'Machine', '2025-10-29 15:41:43', '2025-10-29 15:41:43'),
 (1, '1GEL', 'Gelato', 'Batch freezer', '2025-10-22 18:39:38', '2025-10-22 18:39:38'),
 (2, '2SOR', 'Sorbet', 'Sorbet maker', '2025-10-22 18:39:38', '2025-10-22 18:39:38'),
 (3, '3SSE', 'Soft-serve', 'Softy machine', '2025-10-22 18:39:38', '2025-10-22 18:39:38');

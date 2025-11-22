@@ -18,6 +18,6 @@ VALUES
     (03, '3SSE', 'Soft-serve', 'Softy machine');
 
 SELECT * FROM IcecreamTypes;
-DELETE FROM IcecreamTypes;
+DELETE FROM IcecreamTypes WHERE `icecreamTypeID` = 100;
 
 DESCRIBE IcecreamTypes

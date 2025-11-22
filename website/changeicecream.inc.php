@@ -1,22 +1,22 @@
-<!-- Jazzlinne Arias 10/31 IT202-001 Phase 3 ja898@njit.edu -->
+<!-- Jazzlinne Arias 11/21 IT202-001 Phase 4 ja898@njit.edu -->
 
 <?php
 require_once("icecream.php");
 
 if (isset($_SESSION['login'])) {
-   $icecreamID = $_POST['icecreamID'];
+   $icecreamID = filter_input(INPUT_POST, 'icecreamID', FILTER_VALIDATE_INT);
    $answer = $_POST['answer'];
    if ($answer == "Update Icecream") {
       $icecreamID = $_POST['icecreamID'];
       $icecream = Icecream::findIcecream($icecreamID);
-      $icecream->icecreamCode = $_POST['icecreamCode'];
-      $icecream->icecreamName = $_POST['icecreamName'];
-      $icecream->icecreamDescription = $_POST['icecreamDescription'];
-      $icecream->icecreamFlavor = $_POST['icecreamFlavor'];
-      $icecream->icecreamServingSize = $_POST['icecreamServingSize'];
-      $icecream->icecreamTypeID = $_POST['icecreamTypeID'];
-      $icecream->icecreamWholesalePrice = $_POST['icecreamWholesalePrice'];
-      $icecream->icecreamListPrice = $_POST['icecreamListPrice'];
+      $icecream->icecreamCode = htmlspecialchars($_POST['icecreamCode']);
+      $icecream->icecreamName = htmlspecialchars($_POST['icecreamName']);
+      $icecream->icecreamDescription = htmlspecialchars($_POST['icecreamDescription']);
+      $icecream->icecreamFlavor = htmlspecialchars($_POST['icecreamFlavor']);
+      $icecream->icecreamServingSize = htmlspecialchars($_POST['icecreamServingSize']);
+      $icecream->icecreamTypeID = htmlspecialchars($_POST['icecreamTypeID']);
+      $icecream->icecreamWholesalePrice = htmlspecialchars($_POST['icecreamWholesalePrice']);
+      $icecream->icecreamListPrice = htmlspecialchars($_POST['icecreamListPrice']);
       $result = $icecream->updateIcecream();
       if ($result) {
          echo "<h2>Icecream $icecreamID updated</h2>\n";

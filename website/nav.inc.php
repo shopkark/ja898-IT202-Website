@@ -1,4 +1,4 @@
-<!-- Jazzlinne Arias 10/31 IT202-001 Phase 3 ja898@njit.edu -->
+<!-- Jazzlinne Arias 11/21 IT202-001 Phase 4 ja898@njit.edu -->
 
 <?php
    if (isset($_SESSION['login'])) {
@@ -9,7 +9,10 @@
          echo "<td><h3>Welcome, {$_SESSION['firstName']} {$_SESSION['lastName']} ({$_SESSION['pronouns']})</h3></td>";
          ?>
         <tr>
-          <td><a href="index.php"><strong>Home</strong></a></td>
+          <td>
+            <img src="images/home.png" alt="Home Icon" width="12" height="12">&nbsp;
+            <a href="index.php"><strong>Home</strong></a>
+          </td>
         </tr>
         <tr>
           <td><strong>Icecream Types</strong></td>
@@ -23,7 +26,10 @@
               <strong>Add New Icecream Type</strong></a></td>
         </tr>
         <tr>
-          <td><strong>Icecreams</strong></td>
+          <td>
+            <img src="images/icecreams.png" alt="Icecreams Icon" width="12" height="12">&nbsp;
+            <strong>Icecreams</strong>
+          </td>
         </tr>
         <tr>
           <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=listicecreams">
@@ -39,8 +45,13 @@
           </td>
         </tr>
         <tr>
-          <td><a href="index.php?content=logout">
-              <strong>Logout</strong></a></td>
+          <td>
+            <a href="index.php?content=logout">
+              <img src="images/logout.png" alt="Logout Icon" width="12" height="12"></a>&nbsp;
+            <a href="index.php?content=logout">
+              <strong>Logout</strong>
+            </a>
+          </td>
         </tr>
         <tr>
           <td>&nbsp;</td>
@@ -49,7 +60,7 @@
           <td>
             <form action="index.php" method="post">
               <label>Search for Icecream:</label><br>
-              <input type="text" name="icecreamID" size="14" />
+              <input type="number" name="icecreamID" size="14" min="1" max="999"/>
               <input type="submit" value="find" />
               <input type="hidden" name="content" value="updateicecream" />
             </form>
@@ -59,7 +70,7 @@
           <td>
             <form action="index.php" method="post">
               <label>Search for Icecream Type:</label><br>
-              <input type="text" name="icecreamTypeID" size="14" />
+              <input type="number" name="icecreamTypeID" size="14" min="1" max="999"/>
               <input type="submit" value="find" />
               <input type="hidden" name="content" value="displayicecreamtype" />
             </form>

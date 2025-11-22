@@ -11,7 +11,7 @@ if ($icecreams) {
             <?php
             foreach ($icecreams as $icecream) {
                $icecreamID = $icecream->icecreamID;
-               $option = $icecreamID . " - " . $icecream->icecreamCode . ", " . $icecream->icecreamName . "\nDetails: " . $icecream->icecreamDescription . ", " . $icecream->icecreamFlavor . ", " . $icecream->icecreamServingSize . ", " . $icecream->icecreamTypeID . ", " . $icecream->icecreamWholesalePrice . ", " . $icecream->icecreamListPrice;
+               $option = $icecreamID . " - " . $icecream->icecreamCode . ", " . $icecream->icecreamName . ", Details: " . $icecream->icecreamDescription . ", " . $icecream->icecreamFlavor . ", " . $icecream->icecreamServingSize . ", " . $icecream->icecreamTypeID . ", " . $icecream->icecreamWholesalePrice . ", " . $icecream->icecreamListPrice;
                echo "<option value=\"$icecreamID\">$option</option>\n";
             }
             ?>

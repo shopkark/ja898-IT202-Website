@@ -39,4 +39,4 @@ VALUES
 
 SELECT * FROM Icecreams;
 
-DELETE FROM Icecreams;
+DELETE FROM Icecreams WHERE `icecreamID`=100;

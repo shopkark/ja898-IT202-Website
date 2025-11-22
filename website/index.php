@@ -1,18 +1,23 @@
-<!-- Jazzlinne Arias 10/31 IT202-001 Phase 3 ja898@njit.edu -->
+<!-- Jazzlinne Arias 11/21 IT202-001 Phase 4 ja898@njit.edu -->
 
 <?php
 session_start();
+require_once("config.php");
 require_once("icecreamtype.php");
 require_once("icecream.php");
 ?>
 <!DOCTYPE html>
 <html>
-<head><title>Icecream Shop's Inventory Helper</title></head>
+<head>
+    <title>Icecream Shop's Inventory Helper</title>
+    <link rel="stylesheet" type="text/css" href="ih_styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
 <body>
     <header>
         <?php include("header.inc.php"); ?>
     </header>
-    <section style="height: 425px;">
+    <section style="height: 375px;">
         <nav>
             <?php include("nav.inc.php"); ?>
         </nav>

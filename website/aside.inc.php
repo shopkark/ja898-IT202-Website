@@ -1,3 +1,5 @@
+<!-- Jazzlinne Arias 12/5 IT202-001 Phase 5 ja898@njit.edu -->
+
 <h1 style="color: #a8f1ff;">Real-time Inventory Info</h1>
 <br>
 <br>

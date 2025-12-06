@@ -1,3 +1,5 @@
+// Jazzlinne Arias 12/5 IT202-001 Phase 5 ja898@njit.edu
+
 function getRealTime() {
     var domicecreamtypes = document.getElementById("icecreamtypecount");
     var domicecreams = document.getElementById("icecreamcount");

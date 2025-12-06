@@ -1,11 +1,9 @@
--- Jazzlinne Arias 12/5 IT202-001 Phase 5 ja898@njit.edu
-
 -- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
 -- Host: sql1.njit.edu
--- Generation Time: Nov 22, 2025 at 02:46 AM
+-- Generation Time: Dec 06, 2025 at 05:57 AM
 -- Server version: 8.0.17
 -- PHP Version: 7.4.8
 
@@ -47,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `Icecreams` (
 --
 
 INSERT INTO `Icecreams` (`icecreamID`, `icecreamCode`, `icecreamName`, `icecreamDescription`, `icecreamFlavor`, `icecreamServingSize`, `icecreamTypeID`, `icecreamWholesalePrice`, `icecreamListPrice`, `DateTimeCreated`, `DateTimeUpdated`) VALUES
-(1, '01STR', 'Strawberry Gelato', 'Ripe, sun-sweetened strawberry gelato. Bursts with fresh fruity flavor in every spoonful.', 'Strawberry', 'Small', 1, 2.00, 50.50, '2025-10-25 02:29:53', '2025-11-22 02:36:15'),
+(1, '01STR', 'Strawberry Gelato', 'Ripe, sun-sweetened strawberry gelato! Bursts with fresh fruity flavor in every spoonful.', 'Strawberry', 'Small', 1, 2.00, 5.50, '2025-10-25 02:29:53', '2025-12-06 05:36:07'),
 (2, '02STR', 'Strawberry Gelato', 'Ripe, sun-sweetened strawberry gelato. Bursts with fresh fruity flavor in every spoonful.', 'Strawberry', 'Medium', 1, 2.00, 5.25, '2025-10-25 02:29:53', '2025-10-25 02:29:53'),
 (3, '03HAZ', 'Hazelnut Gelato', 'Rich and velvety roasted hazelnut gelato. Melts beautifully on the tongue.', 'Hazelnut', 'Small', 1, 2.00, 4.75, '2025-10-25 02:29:53', '2025-10-25 02:29:53'),
 (4, '04HAZ', 'Hazelnut Gelato', 'Rich and velvety roasted hazelnut gelato. Melts beautifully on the tongue.', 'Hazelnut', 'Medium', 1, 2.00, 5.25, '2025-10-25 02:29:53', '2025-10-25 02:29:53'),
@@ -65,7 +63,7 @@ INSERT INTO `Icecreams` (`icecreamID`, `icecreamCode`, `icecreamName`, `icecream
 (16, '16CHO', 'Chocolate Icecream', 'Decadent and silky chocolate icecream. A luscious flavor that satisfies every craving.', 'Chocolate', 'Medium', 3, 1.50, 5.00, '2025-10-25 02:29:53', '2025-10-25 02:29:53'),
 (17, '17CDO', 'Cookie dough Icecream', 'Creamy vanilla icecream. Swirled with chunks of buttery cookie dough and rich chocolate chips.', 'Cookie dough', 'Small', 3, 1.50, 4.50, '2025-10-25 02:29:53', '2025-10-25 02:29:53'),
 (18, '18CDO', 'Cookie dough Icecream', 'Creamy vanilla icecream. Swirled with chunks of buttery cookie dough and rich chocolate chips.', 'Cookie dough', 'Medium', 3, 1.50, 5.00, '2025-10-25 02:29:53', '2025-10-25 02:29:53'),
-(20, 'TEST', 'name', 'descdescdescdescdescdescdescdesc', 'flavor', 'size', 5, 2.50, 5.00, '2025-11-22 02:26:55', '2025-11-22 02:26:55');
+(19, '19MAT', 'Matcha Fro-Yo', 'A health food in the form of icecream! Sure to supercharge your day.', 'Matcha', 'Small', 4, 2.00, 5.00, '2025-12-06 05:37:18', '2025-12-06 05:37:18');
 
 --
 -- Indexes for dumped tables

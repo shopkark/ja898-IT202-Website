@@ -1,11 +1,9 @@
--- Jazzlinne Arias 12/5 IT202-001 Phase 5 ja898@njit.edu
-
 -- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
 -- Host: sql1.njit.edu
--- Generation Time: Nov 22, 2025 at 02:46 AM
+-- Generation Time: Dec 06, 2025 at 05:56 AM
 -- Server version: 8.0.17
 -- PHP Version: 7.4.8
 
@@ -42,11 +40,10 @@ CREATE TABLE IF NOT EXISTS `IcecreamTypes` (
 --
 
 INSERT INTO `IcecreamTypes` (`icecreamTypeID`, `icecreamTypeCode`, `icecreamTypeName`, `icecreamTypeMachine`, `DateTimeCreated`, `DateTimeUpdated`) VALUES
-(0, 'TEST', 'Test data', 'Machine', '2025-10-29 15:41:43', '2025-10-29 15:41:43'),
-(1, '1GEL', 'Gelato', 'Batch freezer', '2025-10-22 18:39:38', '2025-10-22 18:39:38'),
+(1, '1GTO', 'Gelato', 'Batch freezer', '2025-10-22 18:39:38', '2025-12-06 05:34:29'),
 (2, '2SOR', 'Sorbet', 'Sorbet maker', '2025-10-22 18:39:38', '2025-10-22 18:39:38'),
 (3, '3SSE', 'Soft-serve', 'Softy machine', '2025-10-22 18:39:38', '2025-10-22 18:39:38'),
-(5, 'TESTING', 'Test text', 'Test text', '2025-11-22 02:22:43', '2025-11-22 02:22:43');
+(4, '4FRO', 'Frozen Yogurt', 'Softy Machine', '2025-12-06 05:34:58', '2025-12-06 05:34:58');
 
 --
 -- Indexes for dumped tables

@@ -3,6 +3,7 @@
 function getRealTime() {
     var domicecreamtypes = document.getElementById("icecreamtypecount");
     var domicecreams = document.getElementById("icecreamcount");
+    var domwholesaleprice = document.getElementById("wholesalepricetotal");
     var domlistprice = document.getElementById("listpricetotal");
 
     var request = new XMLHttpRequest();
@@ -17,11 +18,15 @@ function getRealTime() {
             var xmlicecreams = xmldoc.getElementsByTagName("icecreams")[0];
             var icecreams = xmlicecreams.childNodes[0].nodeValue;
 
+            var xmlwholesaleprice = xmldoc.getElementsByTagName("wholesaleprice")[0];
+            var wholesaleprice = xmlwholesaleprice.childNodes[0].nodeValue;
+
             var xmllistprice = xmldoc.getElementsByTagName("listprice")[0];
             var listprice = xmllistprice.childNodes[0].nodeValue;
 
             domicecreamtypes.innerHTML = icecreamtypes;
             domicecreams.innerHTML = icecreams;
+            domwholesaleprice.innerHTML = wholesaleprice;
             domlistprice.innerHTML = listprice;
         }
     };

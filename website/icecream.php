@@ -181,6 +181,18 @@ class Icecream
         }
     }
 
+    static function getTotalWholesalePrice() {
+        $db = getDB();
+        $query = "SELECT SUM(icecreamWholesalePrice) FROM Icecreams";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        } else {
+            return NULL;
+        }
+    }
+
     static function getTotalListPrice() {
         $db = getDB();
         $query = "SELECT SUM(icecreamListPrice) FROM Icecreams";

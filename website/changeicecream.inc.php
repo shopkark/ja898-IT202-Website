@@ -2,12 +2,10 @@
 
 <?php
 require_once("icecream.php");
-
 if (isset($_SESSION['login'])) {
    $icecreamID = filter_input(INPUT_POST, 'icecreamID', FILTER_VALIDATE_INT);
    $answer = $_POST['answer'];
    if ($answer == "Update Icecream") {
-      $icecreamID = $_POST['icecreamID'];
       $icecream = Icecream::findIcecream($icecreamID);
       $icecream->icecreamCode = htmlspecialchars($_POST['icecreamCode']);
       $icecream->icecreamName = htmlspecialchars($_POST['icecreamName']);

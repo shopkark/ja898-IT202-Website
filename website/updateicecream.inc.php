@@ -7,8 +7,8 @@ if (!isset($_POST['icecreamID']) or (!is_numeric($_POST['icecreamID']))) {
    <a href="index.php?content=listicecreams">List icecreams</a>
    <?php
 } else {
-   $icecreamID = filter_input(INPUT_POST, 'icecreamID', FILTER_VALIDATE_INT);
-    if (is_numeric($icecreamID)) {
+    $icecreamID = filter_input(INPUT_POST, 'icecreamID', FILTER_VALIDATE_INT);
+    if (is_int($icecreamID)) {
         $icecream = Icecream::findIcecream($icecreamID);
         if ($icecream) {
         ?>
@@ -29,15 +29,15 @@ if (!isset($_POST['icecreamID']) or (!is_numeric($_POST['icecreamID']))) {
                 </tr>
             <tr>
                 <td>Description:</td>
-                <td><textarea name="icecreamDescription" size="20" maxlength="500"><?php echo $icecream->icecreamDescription; ?></textarea></td>
+                <td><textarea name="icecreamDescription" size="20" maxlength="500" required><?php echo $icecream->icecreamDescription; ?></textarea></td>
             </tr>
             <tr>
                 <td>Flavor:</td>
-                <td><input type="text" name="icecreamFlavor" size="20" value="<?php echo $icecream->icecreamFlavor; ?>"></td>
+                <td><input type="text" name="icecreamFlavor" size="20" maxlength="100" value="<?php echo $icecream->icecreamFlavor; ?>" required></td>
             </tr>
             <tr>
                 <td>Serving Size:</td>
-                <td><input type="text" name="icecreamServingSize" size="5" value="<?php echo $icecream->icecreamServingSize; ?>"></td>
+                <td><input type="text" name="icecreamServingSize" size="5" maxlength="10" value="<?php echo $icecream->icecreamServingSize; ?>" required></td>
             </tr>
             <tr>
                 <td>Icecream type ID</td>
@@ -45,11 +45,11 @@ if (!isset($_POST['icecreamID']) or (!is_numeric($_POST['icecreamID']))) {
             </tr>
             <tr>
                 <td>Wholesale Price:</td>
-                <td><input type="float" name="icecreamWholesalePrice" size="5" min="0" max="999" value="<?php echo $icecream->icecreamWholesalePrice; ?>" required></td>
+                <td><input type="number" step="0.01" name="icecreamWholesalePrice" size="5" min="0" max="999" value="<?php echo $icecream->icecreamWholesalePrice; ?>" required></td>
             </tr>
             <tr>
                 <td>List Price:</td>
-                <td><input type="float" name="icecreamListPrice" size="5" min="0" max="999" value="<?php echo $icecream->icecreamListPrice; ?>" required></td>
+                <td><input type="number" step="0.01" name="icecreamListPrice" size="5" min="0" max="999" value="<?php echo $icecream->icecreamListPrice; ?>" required></td>
             </tr>
                 </table><br><br>
                 <input type="submit" name="answer" value="Update Icecream">

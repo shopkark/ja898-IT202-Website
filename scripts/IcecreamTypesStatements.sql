@@ -17,6 +17,11 @@ VALUES
     (02, '2SOR', 'Sorbet', 'Sorbet maker'),
     (03, '3SSE', 'Soft-serve', 'Softy machine');
 
+INSERT INTO IcecreamTypes
+(icecreamTypeID, icecreamTypeCode, icecreamTypeName, icecreamTypeMachine)
+VALUES
+    (05, 'TEST2', 'Test name', 'Test machine')
+
 SELECT * FROM IcecreamTypes;
 DELETE FROM IcecreamTypes WHERE `icecreamTypeID` = 100;
 

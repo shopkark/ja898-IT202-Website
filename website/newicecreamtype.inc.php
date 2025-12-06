@@ -17,7 +17,7 @@
        </tr>
        <tr>
            <td>Icecream Type Machine:</td>
-           <td><input type="text" name="icecreamTypeMachine" size="20" minlegth="5" maxlength="100"></td>
+           <td><input type="text" name="icecreamTypeMachine" size="20" minlegth="5" maxlength="100" required></td>
        </tr>
    </table><br>
    <input type="submit" value="Submit New Icecream Type">

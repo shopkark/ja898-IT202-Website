@@ -109,5 +109,17 @@ class IcecreamType
        $db->close();
        return $result;
    }
+
+   static function getTotalTypes() {
+    $db = getDB();
+    $query = "SELECT COUNT(icecreamTypeID) FROM IcecreamTypes";
+    $result = $db->query($query);
+    $row = $result->fetch_array();
+    if ($row) {
+        return $row[0];
+    } else {
+        return NULL;
+    }
+   }
 }
 ?>

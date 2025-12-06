@@ -29,16 +29,16 @@ if (!isset($_SESSION['login'])) {
   <form name="login" action="index.php" method="post">
     <label>Email:</label>
     <input type="text" name="emailAddress" size="20" minlength="5" maxlength="200" required>
-    <!-- <br><br> -->
+
     <label>Password:</label>
     <input type="password" name="password" size="20" minlength="8" maxlength="200" required>
-    <!-- <br><br> -->
+
     <input type="submit" value="Login">
     <input type="hidden" name="content" value="validate">
   </form>
 <?php
 } else {
-   echo "<h2>Welcome to Icecream Shop's Inventory Helper, {$_SESSION['firstName']} {$_SESSION['lastName']} ({$_SESSION['pronouns']})</h2>";
+   echo "<h2>Welcome to Icecream Shop's Inventory Helper, {$_SESSION['firstName']} {$_SESSION['lastName']} ({$_SESSION['emailAddress']})</h2>";
 ?>
    <br><br>
    <p>This program tracks category and item inventory</p>

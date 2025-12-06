@@ -39,4 +39,9 @@ VALUES
 
 SELECT * FROM Icecreams;
 
+INSERT INTO Icecreams 
+(icecreamID, icecreamCode, icecreamName, icecreamDescription, icecreamFlavor, icecreamServingSize, icecreamTypeID, icecreamWholesalePrice, icecreamListPrice)
+VALUES
+    (000, 'TESTITEM', 'name', 'descdescdescdescdescdescdescdescdesc', 'flav', 'size', 0, 0.50, 1.00)
+
 DELETE FROM Icecreams WHERE `icecreamID`=100;

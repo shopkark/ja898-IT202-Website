@@ -10,29 +10,43 @@ require_once("icecream.php");
 <html>
 <head>
     <title>Icecream Shop's Inventory Helper</title>
-    <link rel="stylesheet" type="text/css" href="ih_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" type="image/png" href="images/logo.png">
+    <script src="realtime.js"></script>
 </head>
 <body>
-    <header>
-        <?php include("header.inc.php"); ?>
-    </header>
-    <section style="height: 375px;">
-        <nav>
-            <?php include("nav.inc.php"); ?>
-        </nav>
-       <main>
-           <?php
-           if (isset($_REQUEST['content'])) {
-               include($_REQUEST['content'] . ".inc.php");
-           } else {
-               include("main.inc.php");
-           }
-           ?>
-       </main>
-   </section>
-   <footer>
-    <?php include("footer.inc.php"); ?>
-   </footer>
+    <div id="page">
+        <div id="header">
+            <?php include("header.inc.php"); ?>
+        </div>
+        <div id="main">
+            <?php if (isset($_SESSION['login'])) { ?>
+            <div id="nav">
+                <?php include("nav.inc.php") ?>
+            </div>
+            <?php } ?>
+            <div id="content">
+                <?php
+                if (isset($_REQUEST['content'])) {
+                    include($_REQUEST['content'] . ".inc.php");
+                } else {
+                    include("main.inc.php");
+                }
+                ?>
+            </div>
+            <?php if (isset($_SESSION['login'])) { ?>
+            <div id="aside">
+                <?php include("aside.inc.php"); ?>
+                <script>
+                    getRealTime();
+                    setInterval(getRealTime, 5000);
+                </script>
+            </div>     
+            <?php } ?>  
+        </div>
+        <div id="footer">
+            <?php include("footer.inc.php"); ?>
+        </div>
+    </div>
 </body>
 </html>

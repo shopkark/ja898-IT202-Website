@@ -3,7 +3,6 @@
 <?php
    if (isset($_SESSION['login'])) {
    ?>
-    <div class="navigation" style="float: left; height: 100%; min-width: 175px; width: auto;">
       <table width="100%" cellpadding="3">
         <?php
          echo "<td><h3>Welcome, {$_SESSION['firstName']} {$_SESSION['lastName']} ({$_SESSION['pronouns']})</h3></td>";
@@ -77,7 +76,6 @@
           </td>
         </tr>
       </table>
-    </div>
   <?php
    }
    ?>
